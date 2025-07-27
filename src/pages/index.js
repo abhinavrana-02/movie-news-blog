@@ -19,13 +19,28 @@ export default function Home() {
 
   return (
     <div className="p-4 max-w-3xl mx-auto">
-      <Head>
-        <title> Movie Buzz - Hollywood News </title>{" "}
-        <meta
-          name="description"
-          content="Latest Hollywood and movie news from trusted sources."
-        />
-      </Head>
+     <Head>
+  <title>Movie Buzz - Latest Hollywood Movie News</title>
+  <meta name="description" content="Catch all the latest Hollywood movie news, reviews, and updates!" />
+  <meta name="keywords" content="Hollywood news, movie updates, celebrity news, film reviews, latest trailers" />
+  <meta name="author" content="Movie Buzz Team" />
+
+  {/* Open Graph for social media */}
+  <meta property="og:title" content="Movie Buzz - Latest Hollywood Movie News" />
+  <meta property="og:description" content="Catch all the latest Hollywood movie news, reviews, and updates!" />
+  <meta property="og:image" content="/og-image.jpg" /> {/* Optional: Add your image in public folder */}
+  <meta property="og:url" content="https://movie-news-blog-guxv.vercel.app/" />
+  <meta property="og:type" content="website" />
+
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Movie Buzz - Latest Hollywood Movie News" />
+  <meta name="twitter:description" content="Catch all the latest Hollywood movie news, reviews, and updates!" />
+  <meta name="twitter:image" content="/og-image.jpg" /> {/* Optional */}
+
+  <link rel="canonical" href="https://movie-news-blog-guxv.vercel.app/" />
+</Head>
+
       <h1 className="text-4xl font-bold mb-6 text-center"> Movie Buzz </h1>
       {articles.length === 0 ? (
         <p className="text-center text-gray-500"> Loading news... </p>
